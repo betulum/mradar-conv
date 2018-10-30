@@ -1,5 +1,5 @@
 %% common
-dt = 0.0001;   % sampling
+dt = 0.00025;   % sampling = 4 samples per period
 
 %% signal
 freq = 1000;    % signal frequency
@@ -9,3 +9,7 @@ T = 0.15;       % signal duration
 
 %% noise
 noiseVariance = 0.5;
+
+%% delay & attenuation
+atten = 0.3;
+delay = 1;      % in samples
