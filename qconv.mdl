@@ -1,5 +1,5 @@
 Model {
-  Name			  "sconv"
+  Name			  "qconv"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1251"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.48"
+    ComputedModelVersion    "1.51"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -41,7 +41,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [953.0, 0.0, 974.0, 1047.0]
+      Location		      [323.0, 52.0, 1235.0, 912.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -65,9 +65,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[731.0, 872.0]
+	Extents			[992.0, 737.0]
 	ZoomFactor		[1.0]
-	Offset			[83.0, 0.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -77,9 +77,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mishuk"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Sep 22 20:41:54 2019"
-  RTWModifiedTimeStamp	  491085590
-  ModelVersionFormat	  "1.%<AutoIncrement:48>"
+  LastModifiedDate	  "Sun Sep 22 21:28:19 2019"
+  RTWModifiedTimeStamp	  491088454
+  ModelVersionFormat	  "1.%<AutoIncrement:51>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -987,8 +987,8 @@ Model {
     }
   }
   System {
-    Name		    "sconv"
-    Location		    [953, 0, 1927, 1047]
+    Name		    "qconv"
+    Location		    [323, 52, 1558, 964]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
@@ -1002,7 +1002,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "134"
+    SIDHighWatermark	    "145"
     Block {
       BlockType		      Reference
       Name		      "AWGN\nChannel"
@@ -1050,7 +1050,7 @@ Model {
       Variant		      off
       System {
 	Name			"MatchedFilter"
-	Location		[953, 0, 1927, 1047]
+	Location		[323, 52, 1558, 964]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -1093,87 +1093,87 @@ Model {
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "convolution1"
-	  SID			  "130"
+	  Name			  "qconvolution"
+	  SID			  "145"
 	  Ports			  [2, 1]
-	  Position		  [0, 85, 75, 125]
-	  ZOrder		  18
+	  Position		  [0, 34, 70, 76]
+	  ZOrder		  24
 	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
+	  ContentPreviewEnabled	  off
+	  delay			  "1000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "qconvolution1"
+	  SID			  "140"
+	  Ports			  [2, 1]
+	  Position		  [0, 84, 70, 126]
+	  ZOrder		  19
+	  ShowName		  off
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
 	  ContentPreviewEnabled	  off
 	  delay			  "2500"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "convolution2"
-	  SID			  "132"
+	  Name			  "qconvolution2"
+	  SID			  "141"
 	  Ports			  [2, 1]
-	  Position		  [0, 185, 75, 225]
+	  Position		  [0, 134, 70, 176]
 	  ZOrder		  20
 	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
-	  ContentPreviewEnabled	  off
-	  delay			  "5500"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "convolution3"
-	  SID			  "133"
-	  Ports			  [2, 1]
-	  Position		  [0, 235, 75, 275]
-	  ZOrder		  21
-	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
-	  ContentPreviewEnabled	  off
-	  delay			  "7000"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "convolution4"
-	  SID			  "134"
-	  Ports			  [2, 1]
-	  Position		  [0, 285, 75, 325]
-	  ZOrder		  22
-	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
-	  ContentPreviewEnabled	  off
-	  delay			  "8500"
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "convolution5"
-	  SID			  "131"
-	  Ports			  [2, 1]
-	  Position		  [0, 135, 75, 175]
-	  ZOrder		  19
-	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
 	  ContentPreviewEnabled	  off
 	  delay			  "4000"
 	}
 	Block {
 	  BlockType		  Reference
-	  Name			  "convolution6"
-	  SID			  "129"
+	  Name			  "qconvolution3"
+	  SID			  "142"
 	  Ports			  [2, 1]
-	  Position		  [0, 35, 75, 75]
-	  ZOrder		  17
+	  Position		  [0, 184, 70, 226]
+	  ZOrder		  21
 	  ShowName		  off
-	  LibraryVersion	  "1.3"
-	  SourceBlock		  "convolution/convolution5"
-	  SourceType		  "Convolution"
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
 	  ContentPreviewEnabled	  off
-	  delay			  "1000"
+	  delay			  "5500"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "qconvolution4"
+	  SID			  "143"
+	  Ports			  [2, 1]
+	  Position		  [0, 234, 70, 276]
+	  ZOrder		  22
+	  ShowName		  off
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
+	  ContentPreviewEnabled	  off
+	  delay			  "7000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "qconvolution5"
+	  SID			  "144"
+	  Ports			  [2, 1]
+	  Position		  [0, 284, 70, 326]
+	  ZOrder		  23
+	  ShowName		  off
+	  LibraryVersion	  "1.6"
+	  SourceBlock		  "qconvolution/qconvolution"
+	  SourceType		  ""
+	  ContentPreviewEnabled	  off
+	  delay			  "8500"
 	}
 	Block {
 	  BlockType		  Outport
@@ -1191,51 +1191,51 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  92
+	  ZOrder		  3
 	  SrcBlock		  "sig"
 	  SrcPort		  1
 	  Points		  [16, 0]
 	  Branch {
-	    ZOrder		    90
-	    DstBlock		    "convolution6"
+	    ZOrder		    113
+	    DstBlock		    "qconvolution"
 	    DstPort		    2
 	  }
 	  Branch {
 	    ZOrder		    56
 	    Points		    [0, 50]
 	    Branch {
-	      ZOrder		      96
-	      DstBlock		      "convolution1"
+	      ZOrder		      97
+	      DstBlock		      "qconvolution1"
 	      DstPort		      2
 	    }
 	    Branch {
 	      ZOrder		      58
 	      Points		      [0, 50]
 	      Branch {
-		ZOrder			97
-		DstBlock		"convolution5"
+		ZOrder			101
+		DstBlock		"qconvolution2"
 		DstPort			2
 	      }
 	      Branch {
 		ZOrder			60
 		Points			[0, 50]
 		Branch {
-		  ZOrder		  100
-		  DstBlock		  "convolution2"
+		  ZOrder		  103
+		  DstBlock		  "qconvolution3"
 		  DstPort		  2
 		}
 		Branch {
 		  ZOrder		  63
 		  Points		  [0, 50; 1, 0]
 		  Branch {
-		    ZOrder		    106
+		    ZOrder		    110
 		    Points		    [0, 50]
-		    DstBlock		    "convolution4"
+		    DstBlock		    "qconvolution5"
 		    DstPort		    2
 		  }
 		  Branch {
 		    ZOrder		    105
-		    DstBlock		    "convolution3"
+		    DstBlock		    "qconvolution4"
 		    DstPort		    2
 		  }
 		}
@@ -1244,71 +1244,71 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  108
-	  SrcBlock		  "convolution4"
+	  ZOrder		  109
+	  SrcBlock		  "qconvolution5"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  6
 	}
 	Line {
-	  ZOrder		  103
-	  SrcBlock		  "convolution3"
+	  ZOrder		  107
+	  SrcBlock		  "qconvolution4"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  5
 	}
 	Line {
-	  ZOrder		  91
-	  SrcBlock		  "convolution6"
+	  ZOrder		  111
+	  SrcBlock		  "qconvolution"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  95
-	  SrcBlock		  "convolution1"
+	  ZOrder		  98
+	  SrcBlock		  "qconvolution1"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  98
-	  SrcBlock		  "convolution5"
+	  ZOrder		  100
+	  SrcBlock		  "qconvolution2"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  3
 	}
 	Line {
-	  ZOrder		  102
-	  SrcBlock		  "convolution2"
+	  ZOrder		  104
+	  SrcBlock		  "qconvolution3"
 	  SrcPort		  1
 	  DstBlock		  "Mux"
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  93
+	  ZOrder		  66
 	  SrcBlock		  "ref"
 	  SrcPort		  1
 	  Points		  [43, 0]
 	  Branch {
-	    ZOrder		    107
-	    DstBlock		    "convolution4"
+	    ZOrder		    108
+	    DstBlock		    "qconvolution5"
 	    DstPort		    1
 	  }
 	  Branch {
 	    ZOrder		    68
 	    Points		    [0, -50]
 	    Branch {
-	      ZOrder		      104
-	      DstBlock		      "convolution3"
+	      ZOrder		      106
+	      DstBlock		      "qconvolution4"
 	      DstPort		      1
 	    }
 	    Branch {
 	      ZOrder		      70
 	      Points		      [0, -50; 1, 0]
 	      Branch {
-		ZOrder			101
-		DstBlock		"convolution2"
+		ZOrder			102
+		DstBlock		"qconvolution3"
 		DstPort			1
 	      }
 	      Branch {
@@ -1316,21 +1316,21 @@ Model {
 		Points			[0, -50]
 		Branch {
 		  ZOrder		  99
-		  DstBlock		  "convolution5"
+		  DstBlock		  "qconvolution2"
 		  DstPort		  1
 		}
 		Branch {
 		  ZOrder		  75
 		  Points		  [0, -50]
 		  Branch {
-		    ZOrder		    94
-		    DstBlock		    "convolution1"
+		    ZOrder		    112
+		    Points		    [0, -50]
+		    DstBlock		    "qconvolution"
 		    DstPort		    1
 		  }
 		  Branch {
-		    ZOrder		    88
-		    Points		    [0, -50]
-		    DstBlock		    "convolution6"
+		    ZOrder		    96
+		    DstBlock		    "qconvolution1"
 		    DstPort		    1
 		  }
 		}
@@ -1359,7 +1359,7 @@ Model {
       ZOrder		      -20
       ShowName		      off
       InputPortMap	      "u0"
-      DelayLength	      "2000"
+      DelayLength	      "1001"
     }
     Block {
       BlockType		      Scope
@@ -1378,34 +1378,34 @@ Model {
       " 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
       " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Li"
       "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'PropogationDelay'}},'ShowCont"
-      "ent',true,'Placement',1),struct('MinYLimReal','-17.59208','MaxYLimReal','17.7758','YLabelReal','','MinYLimMag','"
-      "0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0]"
-      ",'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0."
-      "0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0."
-      "0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039215"
-      "6863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames"
-      "',{{'AWGN Channel'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.23311','MaxYLimReal','1.80552','"
-      "YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPha"
-      "se',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrde"
-      "r',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.3921568"
-      "62745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0"
-      "745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames'"
-      ",{{}},'NumLines',6,'LineNames',{{'MatchedFilter:1','MatchedFilter:2','MatchedFilter:3','MatchedFilter:4','Matche"
-      "dFilter:5','MatchedFilter:6'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','-0.23445','MaxYLimReal','"
-      "2.11008','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'"
-      "PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],"
-      "'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549"
-      ";0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647"
-      " 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedCha"
-      "nnelNames',{{}},'NumLines',1,'LineNames',{{'Discrete-Time Integrator'}},'ShowContent',true,'Placement',4)},'Disp"
-      "layPropertyDefaults',struct('YLabelReal','','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',fa"
-      "lse,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 "
-      "1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.3921568627450"
-      "98 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098"
-      "039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},"
-      "'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'DisplayLayoutDimensions',[4 1],'TimeRangeSamp"
-      "les','1','TimeRangeFrames','1'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.C"
-      "onfiguration('Tools','Measurements',true,'Version','2015b')),'Version','2015b','Location',[911 175 1684 894])"
+      "ent',true,'Placement',1),struct('MinYLimReal','-17.90107','MaxYLimReal','18.10283','YLabelReal','','MinYLimMag',"
+      "'0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0"
+      "],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0"
+      ".0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0"
+      ".0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803921"
+      "56863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineName"
+      "s',{{'AWGN Channel'}},'ShowContent',true,'Placement',2),struct('MinYLimReal','-0.14067','MaxYLimReal','1.26606',"
+      "'YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPh"
+      "ase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrd"
+      "er',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156"
+      "862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0."
+      "0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames"
+      "',{{}},'NumLines',6,'LineNames',{{'MatchedFilter:1','MatchedFilter:2','MatchedFilter:3','MatchedFilter:4','Match"
+      "edFilter:5','MatchedFilter:6'}},'ShowContent',true,'Placement',3),struct('MinYLimReal','-0.23445','MaxYLimReal',"
+      "'2.11008','YLabelReal','','MinYLimMag','0','MaxYLimMag','10','LegendVisibility','off','XGrid',true,'YGrid',true,"
+      "'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922]"
+      ",'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607843137254"
+      "9;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.058823529411764"
+      "7 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedCh"
+      "annelNames',{{}},'NumLines',1,'LineNames',{{'Discrete-Time Integrator'}},'ShowContent',true,'Placement',4)},'Dis"
+      "playPropertyDefaults',struct('YLabelReal','','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',f"
+      "alse,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1"
+      " 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745"
+      "098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509"
+      "8039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}}"
+      ",'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'DisplayLayoutDimensions',[4 1],'TimeRangeSam"
+      "ples','1','TimeRangeFrames','1'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr."
+      "Configuration('Tools','Measurements',true,'Version','2015b')),'Version','2015b','Location',[911 175 1684 894])"
       NumInputPorts	      "4"
     }
     Block {
@@ -1630,7 +1630,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "sconv"
+    name		    "qconv"
     created		    "06-Oct-2018 22:50:23"
     isLibrary		    0
     firstTarget		    2
